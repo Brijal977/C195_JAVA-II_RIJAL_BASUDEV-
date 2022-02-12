@@ -44,6 +44,8 @@
 
 		- If user have any appointment with in 15 minutes of login user will get the alert for each of those appointments
 		- Main UI natigates users to 3 sub - ways (Appointments, Customers, Reports)
+		
+		
 
 	* Appointments UI   : allows user to view all appointsments , naviagtes user to ADD, MODIFY UI forms and allows to DELETE the appointments records.
 	* Customer UI 	    : allows user to view all cusomers , naviagtes user to ADD, MODIFY UI forms and allows to DELETE the customers records.
