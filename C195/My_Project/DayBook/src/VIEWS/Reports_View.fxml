@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="886.0" prefWidth="1273.0" style="-fx-background-color: #a2d2ff; -fx-border-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER.Reports_C">
+   <children>
+      <AnchorPane layoutX="85.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="1102.0" style="-fx-background-color: #bde0fe; -fx-border-color: black;">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <TabPane layoutX="1.0" prefHeight="550.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Appointments by month &amp; type">
+                  <content>
+                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="1100.0">
+                           <children>
+                              <AnchorPane layoutX="-2.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="1100.0">
+                                 <children>
+                                    <AnchorPane layoutY="-9.0" prefHeight="511.0" prefWidth="1100.0" style="-fx-background-color: #a2d2ff;">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="OVERLAY" fill="#a2d2ff" height="477.0" layoutX="26.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" width="1058.0" />
+                                          <TableView fx:id="Report1_Tableview" layoutX="49.0" layoutY="80.0" prefHeight="374.0" prefWidth="1011.0">
+                                            <columns>
+                                              <TableColumn fx:id="Appt_type_col" prefWidth="296.6666793823242" text="APPT TYPE" />
+                                              <TableColumn fx:id="Appt_month_col" minWidth="0.0" prefWidth="342.6666564941406" text="MONTH" />
+                                                <TableColumn fx:id="Appt_count_col" prefWidth="369.99993896484375" text="COUNT" />
+                                            </columns>
+                                          </TableView>
+                                          <Label alignment="CENTER" layoutX="347.0" layoutY="27.0" prefHeight="34.0" prefWidth="429.0" text="Appointment   by  Type -  Month">
+                                             <font>
+                                                <Font size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Appointments by Contact">
+                     <content>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="1100.0">
+                           <children>
+                              <AnchorPane layoutX="-2.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="127.0" prefWidth="1100.0">
+                                 <children>
+                                    <AnchorPane layoutX="-1.0" layoutY="-4.0" prefHeight="116.0" prefWidth="1100.0" style="-fx-background-color: #a2d2ff;">
+                                       <children>
+                                          <Polygon blendMode="OVERLAY" fill="DODGERBLUE" layoutX="19.0" layoutY="23.0" points="559.9999389648438, 63.999977111816406, 559.9999389648438, -1.999990463256836, 288.9999694824219, 31.33333969116211" stroke="BLACK" strokeType="INSIDE" />
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="OVERLAY" fill="#a2d2ff" height="68.0" layoutX="32.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" width="460.0" />
+                                          <Label fx:id="Display_board" alignment="CENTER" layoutX="39.0" layoutY="26.0" prefHeight="57.0" prefWidth="446.0" style="-fx-background-color: #000000;" textFill="WHITE">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font></Label>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="OVERLAY" fill="#a2d2ff" height="66.0" layoutX="578.0" layoutY="21.0" stroke="#121c26" strokeType="INSIDE" width="492.0" />
+                                          <Button fx:id="Search2_bttn" contentDisplay="CENTER" layoutX="913.0" layoutY="34.0" mnemonicParsing="false" onAction="#Search2_bttn_Clicked" prefHeight="14.0" prefWidth="131.0" style="-fx-background-color: #1F8FE8; -fx-background-radius: 15px; -fx-font-size: 15;" text="Search" textFill="WHITE">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="Times New Roman Bold" size="10.0" />
+                                             </font>
+                                          </Button>
+                                          <ComboBox fx:id="R2_Contact_Combo" layoutX="600.0" layoutY="33.0" prefHeight="40.0" prefWidth="179.0" promptText="Contact" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="Contact_appt_tableview" layoutY="114.0" prefHeight="393.0" prefWidth="1100.0">
+                                 <columns>
+                                    <TableColumn fx:id="Appt_ID_col" prefWidth="89.0" text="Appt_ID" />
+                                    <TableColumn fx:id="Title_col" prefWidth="76.0" text="Title" />
+                                    <TableColumn fx:id="Description_col" prefWidth="179.0" text="Description" />
+                                    <TableColumn fx:id="Location_col" prefWidth="97.0" text="Location" />
+                                    <TableColumn fx:id="Contact_col" prefWidth="96.0" text="Contact" />
+                                    <TableColumn fx:id="Type_col" prefWidth="97.3333740234375" text="Type" />
+                                    <TableColumn fx:id="Start_DT_col" prefWidth="127.333251953125" text="Start" />
+                                    <TableColumn fx:id="End_DT_col" prefWidth="112.0" text="End" />
+                                    <TableColumn fx:id="Customer_ID_col" prefWidth="112.0" text="Customer ID" />
+                                    <TableColumn fx:id="User_ID_col" prefWidth="112.0" text="User ID" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Customer by Country">
+                     <content>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="1100.0">
+                           <children>
+                              <AnchorPane layoutX="-2.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="127.0" prefWidth="1100.0">
+                                 <children>
+                                    <AnchorPane layoutX="-1.0" layoutY="-4.0" prefHeight="116.0" prefWidth="1100.0" style="-fx-background-color: #a2d2ff;">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" blendMode="OVERLAY" fill="#a2d2ff" height="66.0" layoutX="663.0" layoutY="21.0" stroke="#121c26" strokeType="INSIDE" width="407.0" />
+                                          <Button fx:id="Search3_bttn" contentDisplay="CENTER" layoutX="913.0" layoutY="34.0" mnemonicParsing="false" onAction="#Search3_bttn_Clicked" prefHeight="14.0" prefWidth="131.0" style="-fx-background-color: #1F8FE8; -fx-background-radius: 15px; -fx-font-size: 15;" text="Search" textFill="WHITE">
+                                             <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                             </padding>
+                                             <font>
+                                                <Font name="Times New Roman Bold" size="10.0" />
+                                             </font>
+                                          </Button>
+                                          <ComboBox fx:id="R3_Country_Combo" layoutX="693.0" layoutY="34.0" prefHeight="40.0" prefWidth="171.0" promptText="Select Country" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="R3_Customer_Tableview" layoutY="114.0" prefHeight="393.0" prefWidth="1100.0">
+                                 <columns>
+                                    <TableColumn fx:id="Customer_ID2_col" prefWidth="113.66668128967285" text="Customer_ID" />
+                                    <TableColumn fx:id="Customer_Name_col" prefWidth="167.6667022705078" text="Customer_Name" />
+                                    <TableColumn fx:id="Phone_col" prefWidth="153.0" text="Phone" />
+                                    <TableColumn fx:id="Postal_Code_col" prefWidth="174.3333740234375" text="Postal_Code" />
+                                    <TableColumn fx:id="Street_Address_col" prefWidth="197.0" text="Street_Address" />
+                                    <TableColumn fx:id="Division_col" prefWidth="131.0" text="Division" />
+                                    <TableColumn fx:id="Country_col" prefWidth="151.66656494140625" text="Country" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="505.0" layoutY="14.0" prefHeight="107.0" prefWidth="220.0">
+         <children>
+            <Label fx:id="signin_lbl" layoutX="63.0" layoutY="1.0" prefHeight="105.0" prefWidth="199.0" text="Reports" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="86.0" layoutY="756.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1102.0">
+         <children>
+            <Button fx:id="Main_bttn" contentDisplay="CENTER" layoutX="372.0" layoutY="4.0" mnemonicParsing="false" onAction="#Main_bttn_clicked" prefHeight="41.0" prefWidth="188.0" style="-fx-background-color: #1F8FE8; -fx-background-radius: 15px; -fx-font-size: 15;" text="Main Menu" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="Exit_bttn" contentDisplay="CENTER" layoutX="611.0" layoutY="4.0" mnemonicParsing="false" onAction="#Exit_bttn_Clicked" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #1F8FE8; -fx-background-radius: 15px; -fx-font-size: 15;" text="Exit" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Nirmala UI Bold" size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="48.0" fitWidth="179.0" layoutX="150.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Desktop/VIEWS/LOGO.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="863.0" prefWidth="1248.0" style="-fx-background-color: #a2d2ff; -fx-border-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER.Appointments_C">
+   <children>
+      <AnchorPane layoutX="461.0" layoutY="72.0" prefHeight="49.0" prefWidth="325.0">
+         <children>
+            <Label fx:id="signin_lbl" layoutX="87.0" layoutY="7.0" prefHeight="35.0" prefWidth="212.0" text="APPOINTMENTS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="74.0" layoutY="224.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="1100.0" style="-fx-background-color: #bde0fe; -fx-border-color: black;">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <TableView fx:id="Appointments_Tableview" layoutY="2.0" prefHeight="446.0" prefWidth="1100.0">
+              <columns>
+                <TableColumn fx:id="Appt_ID_col" prefWidth="89.0" text="Appt_ID" />
+                <TableColumn fx:id="Title_col" prefWidth="76.0" text="Title" />
+                  <TableColumn fx:id="Description_col" prefWidth="179.0" text="Description" />
+                  <TableColumn fx:id="Location_col" prefWidth="97.0" text="Location" />
+                  <TableColumn fx:id="Contact_col" prefWidth="96.0" text="Contact" />
+                  <TableColumn fx:id="Type_col" prefWidth="89.0" text="Type" />
+                  <TableColumn fx:id="Start_DT_col" prefWidth="135.0" text="Start" />
+                  <TableColumn fx:id="End_DT_col" prefWidth="112.0" text="End" />
+                  <TableColumn fx:id="Customer_ID_col" prefWidth="112.0" text="Customer ID" />
+                  <TableColumn fx:id="User_ID_col" prefWidth="112.0" text="User ID" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="437.0" layoutY="751.0" prefHeight="44.0" prefWidth="374.0" spacing="50.0">
+         <children>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#Add_Appt_Clicked" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #1F8FE8; -fx-background-radius: 15px; -fx-font-size: 15;" text="ADD" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#Edit_Appt_Clicked" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #1F8FE8; -fx-background-radius: 15px; -fx-font-size: 15;" text="EDIT" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman Bold" size="10.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#Delete_Appt_Clicked" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #1F8FE8; -fx-background-radius: 15px; -fx-font-size: 15;" text="DELETE" textFill="WHITE">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Nirmala UI Bold" size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="841.0" layoutY="202.0" prefHeight="20.0" prefWidth="293.0" spacing="25.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="58.0" text="VIEW BY :" />
+            <RadioButton fx:id="on_week_rad" mnemonicParsing="false" onAction="#View_by_filter" text="Week" />
+            <RadioButton fx:id="on_month_rad" mnemonicParsing="false" onAction="#View_by_filter" text="Month" />
+            <RadioButton fx:id="on_all_rad" layoutX="169.0" layoutY="10.0" mnemonicParsing="false" onAction="#View_by_filter" text="All" />
+         </children>
+      </HBox>
+      <Button contentDisplay="CENTER" layoutX="1048.0" layoutY="26.0" mnemonicParsing="false" onAction="#appt_main_bttn_clicked" prefHeight="20.0" prefWidth="65.0" style="-fx-background-color: #1F8FE8; -fx-background-radius: 15px; -fx-font-size: 15;" text="MAIN" textFill="WHITE">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman Bold" size="10.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="42.0" fitWidth="179.0" layoutX="150.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../OTHER/LOGO.png" />
+         </image>
+      </ImageView>
+      <Button contentDisplay="CENTER" layoutX="1141.0" layoutY="26.0" mnemonicParsing="false" onAction="#appt_exit_bttn_clicked" prefHeight="20.0" prefWidth="65.0" style="-fx-background-color: #1F8FE8; -fx-background-radius: 15px; -fx-font-size: 15;" text="EXIT" textFill="WHITE">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman Bold" size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
